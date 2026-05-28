@@ -7,8 +7,8 @@
 
 ## Instalacao
 ```powershell
-Antes no executar o powershell como administrador e executar o comando:
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
+Antes abrir powershell como administrador e executar o comando:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 Em seguida:
 ```powershell
