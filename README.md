@@ -7,6 +7,13 @@
 
 ## Instalacao
 ```powershell
+Antes no executar o powershell como administrador e executar o comando:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
+```
+Em seguida:
+```powershell
+python.exe -m venv venv
+.\venv\Scripts\activate
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
