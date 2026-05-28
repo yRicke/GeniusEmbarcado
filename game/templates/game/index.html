@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genius</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'game/css/index.css' %}" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Projeto Genius</h1>
+
+      <section class="stage-section">
+        <div id="stage-timer" class="stage-timer hidden">0.00s</div>
+        <div id="stage-screen" class="stage-screen black">
+          <div id="stage-text" class="stage-text">Clique em qualquer botao para iniciar</div>
+        </div>
+      </section>
+
+      <section class="status-section">
+        <article class="status-card">
+          <span>Pontuacao</span>
+          <strong id="score">0</strong>
+        </article>
+        <article class="status-card">
+          <span>Rodada</span>
+          <strong id="round">0</strong>
+        </article>
+        <article class="status-card">
+          <span>Tempo</span>
+          <strong id="timer">-</strong>
+        </article>
+      </section>
+
+      <section class="manual-section">
+        <h2>Teste por teclado</h2>
+        <div class="keymap">
+          <span><kbd>1</kbd> Azul</span>
+          <span><kbd>2</kbd> Verde</span>
+          <span><kbd>3</kbd> Vermelho</span>
+          <span><kbd>4</kbd> Amarelo</span>
+        </div>
+      </section>
+
+      <section class="attempts-section">
+        <div class="attempts-header">
+          <h2>Tentativas</h2>
+          <p id="message">Carregando...</p>
+        </div>
+
+        <div class="summary-grid">
+          <article class="summary-card"><span>Maior pontuacao</span><strong id="best-score">0</strong></article>
+          <article class="summary-card"><span>Ultima pontuacao</span><strong id="last-score">0</strong></article>
+          <article class="summary-card"><span>Total tentativas</span><strong id="attempts">0</strong></article>
+        </div>
+
+        <div id="attempts-list" class="attempts-list"></div>
+      </section>
+    </main>
+
+    <script src="{% static 'game/js/index.js' %}"></script>
+  </body>
+</html>
