@@ -148,6 +148,22 @@ h1 {
   min-width: 160px;
 }
 
+.hint-azul {
+  color: #38bdf8;
+}
+
+.hint-verde {
+  color: #4ade80;
+}
+
+.hint-vermelho {
+  color: #f87171;
+}
+
+.hint-amarelo {
+  color: #facc15;
+}
+
 kbd {
   display: inline-flex;
   align-items: center;
@@ -161,6 +177,30 @@ kbd {
   color: #fff;
   font-family: inherit;
   font-weight: 700;
+}
+
+.hint-azul kbd {
+  background: rgba(14, 165, 233, 0.2);
+  border-color: #38bdf8;
+  color: #7dd3fc;
+}
+
+.hint-verde kbd {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: #4ade80;
+  color: #86efac;
+}
+
+.hint-vermelho kbd {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #f87171;
+  color: #fca5a5;
+}
+
+.hint-amarelo kbd {
+  background: rgba(234, 179, 8, 0.2);
+  border-color: #facc15;
+  color: #fde047;
 }
 
 .status-section,
