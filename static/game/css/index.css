@@ -64,8 +64,8 @@ h1 {
 
 .stage-screen {
   width: 100%;
-  height: 100dvh;
-  min-height: 100dvh;
+  height: 90dvh;
+  min-height: 90dvh;
   border: 1px solid #fff;
   display: grid;
   place-items: center;
@@ -113,8 +113,12 @@ h1 {
 }
 
 .stage-text {
-  margin-top: auto;
-  margin-bottom: auto;
+  order: 2;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: clamp(2rem, 5vw, 4.5rem);
   font-weight: 700;
   color: #fff;
@@ -124,6 +128,7 @@ h1 {
 }
 
 .stage-hints {
+  order: 1;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -231,7 +236,7 @@ kbd {
 
   .stage-content {
     padding: 18px;
-    gap: 22px;
+    gap: 16px;
   }
 
   .stage-hints {

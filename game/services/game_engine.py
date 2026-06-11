@@ -33,7 +33,7 @@ class GeniusGameEngine:
     def _reset_state(self) -> None:
         self._state = {
             "phase": "waiting_start",
-            "message": "Clique qualquer cor para iniciar.",
+            "message": "Clique em qualquer cor para iniciar.",
             "score": 0,
             "round_number": 0,
             "sequence": [],

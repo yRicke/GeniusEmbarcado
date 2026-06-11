@@ -91,7 +91,7 @@ function stageConfig(state) {
 
   return {
     className: "black",
-    text: "CLIQUE QUALQUER COR PARA INICIAR",
+    text: "CLIQUE EM QUALQUER COR PARA INICIAR",
     hideTimer: true,
   };
 }
@@ -168,7 +168,7 @@ function demoRecentAttempts() {
 function createDemoEngine() {
   const state = {
     phase: "waiting_start",
-    message: "Clique qualquer cor para iniciar.",
+    message: "Clique em qualquer cor para iniciar.",
     score: 0,
     round_number: 0,
     sequence: [],
@@ -195,7 +195,7 @@ function createDemoEngine() {
 
   function resetState() {
     state.phase = "waiting_start";
-    state.message = "Clique qualquer cor para iniciar.";
+    state.message = "Clique em qualquer cor para iniciar.";
     state.score = 0;
     state.round_number = 0;
     state.sequence = [];
