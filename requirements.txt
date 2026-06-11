@@ -1,2 +1,2 @@
-﻿Django>=6.0.5
+Django>=6.0.5
 pyserial>=3.5
