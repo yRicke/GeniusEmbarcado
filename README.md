@@ -77,3 +77,27 @@ No navegador, use o teclado:
 ```powershell
 .\venv\Scripts\python.exe manage.py test
 ```
+
+## Deploy na Vercel
+- O deploy usa `Django` para servir a pagina.
+- Na Vercel, o jogo deve rodar em `modo demo`, 100% no navegador.
+- O Arduino nao precisa subir junto e fica fora do deploy.
+- O historico e a pontuacao da demo ficam no `localStorage`.
+
+### Variaveis de ambiente
+Cadastre estas variaveis no projeto da Vercel:
+
+- `DJANGO_SECRET_KEY`: string longa e aleatoria
+- `DJANGO_DEBUG`: `False`
+- `DJANGO_ALLOWED_HOSTS`: `.vercel.app`
+- `GENIUS_RUNTIME_MODE`: `demo`
+
+### Configuracao do projeto
+- Framework Preset: `Other`
+- Root Directory: `.`
+- Build Command: vazio
+- Output Directory: vazio
+- Install Command: vazio
+
+### Observacao
+- Localmente, para seguir usando o backend com Arduino, rode sem `GENIUS_RUNTIME_MODE` ou defina `GENIUS_RUNTIME_MODE=server`.

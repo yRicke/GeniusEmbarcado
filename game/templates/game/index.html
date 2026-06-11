@@ -34,13 +34,20 @@
       </section>
 
       <section class="manual-section">
-        <h2>Teste por teclado</h2>
+        <h2>{% if runtime_mode == "demo" %}Modo demo{% else %}Teste por teclado{% endif %}</h2>
         <div class="keymap">
           <span><kbd>1</kbd> Azul</span>
           <span><kbd>2</kbd> Verde</span>
           <span><kbd>3</kbd> Vermelho</span>
           <span><kbd>4</kbd> Amarelo</span>
         </div>
+        <p>
+          {% if runtime_mode == "demo" %}
+            Esta versao roda 100% no navegador para deploy na Vercel.
+          {% else %}
+            O teclado continua habilitado para teste local sem Arduino.
+          {% endif %}
+        </p>
       </section>
 
       <section class="attempts-section">
@@ -58,7 +65,9 @@
         <div id="attempts-list" class="attempts-list"></div>
       </section>
     </main>
-
+    <script>
+      window.GENIUS_RUNTIME_MODE = "{{ runtime_mode|escapejs }}";
+    </script>
     <script src="{% static 'game/js/index.js' %}"></script>
   </body>
 </html>
