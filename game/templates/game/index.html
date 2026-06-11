@@ -14,40 +14,31 @@
       <section class="stage-section">
         <div id="stage-timer" class="stage-timer hidden">0.00s</div>
         <div id="stage-screen" class="stage-screen black">
-          <div id="stage-text" class="stage-text">Clique em qualquer botao para iniciar</div>
+          <div class="stage-content">
+            <div id="stage-text" class="stage-text">Clique qualquer cor para iniciar</div>
+            <div class="stage-hints" aria-label="Controles do teclado">
+              <span><kbd>1</kbd> Azul</span>
+              <span><kbd>2</kbd> Verde</span>
+              <span><kbd>3</kbd> Vermelho</span>
+              <span><kbd>4</kbd> Amarelo</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="status-section">
-        <article class="status-card">
+        <article class="status-row">
           <span>Pontuacao</span>
           <strong id="score">0</strong>
         </article>
-        <article class="status-card">
+        <article class="status-row">
           <span>Rodada</span>
           <strong id="round">0</strong>
         </article>
-        <article class="status-card">
+        <article class="status-row">
           <span>Tempo</span>
           <strong id="timer">-</strong>
         </article>
-      </section>
-
-      <section class="manual-section">
-        <h2>{% if runtime_mode == "demo" %}Modo demo{% else %}Teste por teclado{% endif %}</h2>
-        <div class="keymap">
-          <span><kbd>1</kbd> Azul</span>
-          <span><kbd>2</kbd> Verde</span>
-          <span><kbd>3</kbd> Vermelho</span>
-          <span><kbd>4</kbd> Amarelo</span>
-        </div>
-        <p>
-          {% if runtime_mode == "demo" %}
-            Esta versao roda 100% no navegador para deploy na Vercel.
-          {% else %}
-            O teclado continua habilitado para teste local sem Arduino.
-          {% endif %}
-        </p>
       </section>
 
       <section class="attempts-section">
@@ -57,9 +48,9 @@
         </div>
 
         <div class="summary-grid">
-          <article class="summary-card"><span>Maior pontuacao</span><strong id="best-score">0</strong></article>
-          <article class="summary-card"><span>Ultima pontuacao</span><strong id="last-score">0</strong></article>
-          <article class="summary-card"><span>Total tentativas</span><strong id="attempts">0</strong></article>
+          <article class="summary-row"><span>Maior pontuacao</span><strong id="best-score">0</strong></article>
+          <article class="summary-row"><span>Ultima pontuacao</span><strong id="last-score">0</strong></article>
+          <article class="summary-row"><span>Total tentativas</span><strong id="attempts">0</strong></article>
         </div>
 
         <div id="attempts-list" class="attempts-list"></div>
